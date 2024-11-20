@@ -1,11 +1,10 @@
 import React from "react";
-import Navigation from "../Components/Navigation";
+import Header from "../../Components/Header/Header";
 
 const Home = () => {
   return (
     <div>
-      <Navigation />
-      <h1>Acceuil</h1>
+      <Header />
     </div>
   );
 };

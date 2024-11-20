@@ -1,11 +1,10 @@
 import React from "react";
-import Navigation from "../Components/Navigation";
+import Header from "../../Components/Header/Header";
 
 const About = () => {
   return (
     <div>
-      <Navigation />
-      <h1>A Propos</h1>
+      <Header />
     </div>
   );
 };
