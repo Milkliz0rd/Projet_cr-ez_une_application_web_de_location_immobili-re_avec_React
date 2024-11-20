@@ -1,15 +1,17 @@
 @font-face {
-  font-family: "font-1";
+  font-family: 'font-1';
   src: url(../Assets/fonts/Montserrat-Medium.ttf);
 }
-$font-1:"font-1", sans-serif;
+$font-1: 'font-1', sans-serif;
+
+$color-1: #ff6060;
 
 body {
-  margin:3.5em;;
+  margin: 3.5em;
   font-family: $font-1;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }

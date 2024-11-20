@@ -1,14 +1,14 @@
-import React from 'react';
-import Navigation from '../Navigation/Navigation';
-import Logo from '../../Assets/img/logo.png'
+import React from 'react'
+import Navigation from '../Navigation/Navigation'
+import Logo from '../../Assets/img/logo-header.png'
 
 const Header = () => {
   return (
-    <header className='header'>
+    <header className="header">
       <Navigation />
       <img src={Logo} alt="logo Kasa" />
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
