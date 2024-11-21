@@ -1,7 +1,9 @@
 @use './Fonts/Fonts.scss';
 
 body {
-  margin: 3.5em;
+  margin-top: 3.5em;
+  margin-left: 250px;
+  margin-right: 250px;
   font-family: Fonts.$font-1;
 }
 

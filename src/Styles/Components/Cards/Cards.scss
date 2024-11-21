@@ -1,0 +1,18 @@
+@use '../../Colors/Colors.scss';
+
+.cards-container {
+  margin-top: 40px;
+  height: 770px;
+  border-radius: 25px;
+  background-color: Colors.$background-cards;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  grid-template-rows: 340px 340px;
+  gap: 50px;
+  overflow: hidden;
+}
+.cards-article {
+  width: 340px;
+  height: 340px;
+  background-color: Colors.$color-1;
+}
