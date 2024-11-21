@@ -1,4 +1,4 @@
-$color-1: #ff6060;
+@use '../../Colors/Colors.scss';
 
 .error-content {
   display: flex;
@@ -7,12 +7,12 @@ $color-1: #ff6060;
   align-items: center;
 }
 .error-title {
-  color: $color-1;
+  color: Colors.$color-1;
   font-size: 18em;
   margin-bottom: 40px;
 }
 .error-descript {
-  color: $color-1;
+  color: Colors.$color-1;
   font-size: 36px;
   margin-top: 75px;
   font-weight: 500;
