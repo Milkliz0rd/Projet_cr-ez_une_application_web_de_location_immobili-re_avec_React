@@ -1,18 +1,38 @@
 @use '../../Colors/Colors.scss';
 
 .cards-container {
-  margin-top: 40px;
-  height: 770px;
-  border-radius: 25px;
-  background-color: Colors.$background-cards;
   display: grid;
-  grid-template-columns: 340px 340px 340px;
-  grid-template-rows: 340px 340px;
-  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 730px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: Colors.$background-cards;
+  text-align: center;
   overflow: hidden;
 }
 .cards-article {
-  width: 340px;
-  height: 340px;
-  background-color: Colors.$color-1;
+  position: relative;
+  border-radius: 25px;
+  margin: 35px 30px 30px 30px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.cards-img {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 290px;
+  height: 290px;
+}
+.cards-title {
+  position: absolute;
+  width: 200px;
+  color: Colors.$white;
+  background-color: rgba(Colors.$color-1, $alpha: 0.9);
+  border-radius: 25px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0.5em;
 }
