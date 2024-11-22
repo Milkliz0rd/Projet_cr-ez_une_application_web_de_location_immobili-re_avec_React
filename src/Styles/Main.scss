@@ -1,9 +1,6 @@
 @use './Fonts/Fonts.scss';
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 1440px;
   margin: 50px auto;
   font-family: Fonts.$font-1;
