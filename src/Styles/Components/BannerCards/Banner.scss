@@ -1,32 +1,36 @@
 @use '../../Colors/Colors.scss';
-
-.banner-container {
-  position: relative; /* Nécessaire pour positionner l'arrière-plan */
+@mixin filter-cover {
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%);
+}
+@mixin banner {
   width: 100%;
   height: 14em;
   border: 1px solid Colors.$black;
   box-shadow: 0px 4px 4px 0px rgba(Colors.$black, $alpha: 0.2);
   border-radius: 2em;
   margin-top: 50px;
-  overflow: hidden; /* Assure que le contenu reste dans le conteneur */
+}
 
+.banner-home {
+  position: relative; /* Pour positionner l'arrière-plan */
+  overflow: hidden; /* le contenu reste dans le conteneur */
+  @include banner;
   /* Arrière-plan géré par un pseudo-élément */
   &::before {
-    content: ''; //effet de calque
+    content: ''; /* effet de calque */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: url(../../../Assets/img/banner-picture.png);
-    background-size: cover;
-    background-position: center;
-    filter: brightness(50%);
     z-index: 1; /* Derrière le contenu */
+    @include filter-cover;
   }
-
   /* Le contenu réel */
-  .banner-title {
+  &__title {
     position: relative; /* Permet de passer devant l'arrière-plan */
     z-index: 2; /* Devant le pseudo-élément */
     font-weight: 700;

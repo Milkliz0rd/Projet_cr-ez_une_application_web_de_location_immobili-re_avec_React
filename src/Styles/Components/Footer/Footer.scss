@@ -1,4 +1,4 @@
-.container {
+.footer-container {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -10,9 +10,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.img-footer {
-  height: 40px;
-  padding: 30px;
+  &__img {
+    height: 40px;
+    padding: 30px;
+  }
 }

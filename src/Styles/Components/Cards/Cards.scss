@@ -1,37 +1,49 @@
 @use '../../Colors/Colors.scss';
-
+@mixin margin-cards {
+  margin: 40px auto;
+}
+@mixin border-container-img {
+  border-radius: 10px;
+}
+@mixin border-article-title {
+  border-radius: 25px;
+}
 .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   height: 750px;
-  margin: 40px auto;
-  border-radius: 10px;
+  @include margin-cards;
+  @include border-container-img;
   background-color: #f6f6f6;
   overflow: hidden;
-}
-.cards-article {
-  position: relative;
-  border-radius: 25px;
-  margin: 40px auto;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.cards-img {
-  object-fit: cover;
-  border-radius: 10px;
-  width: 300px;
-  height: 300px;
-}
-.cards-title {
-  position: absolute;
-  width: 200px;
-  color: Colors.$white;
-  background-color: rgba(Colors.$color-1, $alpha: 0.9);
-  border-radius: 25px;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 26px;
-  padding: 0.5em;
+  padding: 0;
+  &__navlink {
+    margin: auto;
+    &--article {
+      position: relative;
+      @include border-article-title;
+      @include margin-cards;
+      display: flex;
+      flex-direction: column-reverse;
+      .article__img {
+        object-fit: cover;
+        @include border-container-img;
+        width: 300px;
+        height: 300px;
+      }
+      .article__title {
+        position: absolute;
+        width: 200px;
+        color: Colors.$white;
+        background-color: rgba(Colors.$color-1, $alpha: 0.9);
+        @include border-article-title;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 26px;
+        padding: 0.5em;
+      }
+    }
+  }
 }

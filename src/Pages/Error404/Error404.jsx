@@ -9,11 +9,11 @@ const Error404 = () => {
     <div>
       <Header />
       <div className="error-content">
-        <h1 className="error-title">404</h1>
-        <h2 className="error-descript">
+        <h1 className="error-content__title">404</h1>
+        <h2 className="error-content__descript">
           Oups! La page que vous demandez n'existe pas.
         </h2>
-        <NavLink to={'/'} className={'error-nav-link'}>
+        <NavLink to={'/'} className={'error-content__nav'}>
           Retourner sur la page d'acceuil
         </NavLink>
       </div>

@@ -5,20 +5,19 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-}
-.error-title {
   color: Colors.$color-1;
-  font-size: 18em;
-  margin-bottom: 40px;
-}
-.error-descript {
-  color: Colors.$color-1;
-  font-size: 36px;
-  margin-top: 75px;
-  font-weight: 500;
-}
-.error-nav-link {
-  color: black;
-  text-decoration: underline;
-  margin-top: 75px;
+  &__title {
+    font-size: 18em;
+    margin-bottom: 40px;
+  }
+  &__descript {
+    font-size: 36px;
+    margin-top: 75px;
+    font-weight: 500;
+  }
+  &__nav {
+    color: black;
+    text-decoration: underline;
+    margin-top: 75px;
+  }
 }
