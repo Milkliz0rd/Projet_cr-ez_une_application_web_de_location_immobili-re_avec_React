@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import BannerAbout from '../../Components/BannerAbout/BannerAbout'
+import Collapses from '../../Components/Collapses/Collapses'
 
 const About = () => {
   return (
@@ -9,6 +10,7 @@ const About = () => {
       <Header />
       <div>
         <BannerAbout />
+        <Collapses />
       </div>
       <Footer />
     </div>
