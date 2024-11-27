@@ -12,11 +12,14 @@
 @mixin collapse-title {
   margin-left: 20px;
 }
-@mixin collapse-btn {
+@mixin collapse-btn-close {
   cursor: pointer;
   margin: 20px;
+  transform: rotate(0deg);
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@mixin collapse-btn-open {
+}
 .collapse-container {
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +31,10 @@
       @include collapse-title;
     }
     &__btn {
-      @include collapse-btn;
+      @include collapse-btn-close;
+      &.open {
+        transform: rotate(180deg);
+      }
     }
   }
   .collapse-respect {
@@ -37,7 +43,7 @@
       @include collapse-title;
     }
     &__btn {
-      @include collapse-btn;
+      @include collapse-btn-close;
     }
   }
   .collapse-services {
@@ -46,7 +52,7 @@
       @include collapse-title;
     }
     &__btn {
-      @include collapse-btn;
+      @include collapse-btn-close;
     }
   }
   .collapse-security {
@@ -55,7 +61,28 @@
       @include collapse-title;
     }
     &__btn {
-      @include collapse-btn;
+      @include collapse-btn-close;
+    }
+  }
+  .collapse-fiability__content {
+    background-color: Colors.$background-cards;
+    width: 1023px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      visibility 0s linear 450ms,
+      opacity 450ms ease,
+      transform 450ms ease;
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition:
+        visibility 0s linear 0s,
+        opacity 450ms ease,
+        transform 450ms ease;
     }
   }
 }
