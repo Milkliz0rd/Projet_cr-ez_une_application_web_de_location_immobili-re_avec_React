@@ -13,7 +13,9 @@ const Cards = () => {
               src={cover}
               alt="photos des locations"
             />
-            <h2 className="article__title">{title}</h2>
+            <div className="article__container">
+              <h2 className="article__container--title">{title}</h2>
+            </div>
           </article>
         </NavLink>
       ))}
