@@ -5,16 +5,25 @@ import { NavLink } from 'react-router-dom'
 const Cards = () => {
   return (
     <div className="cards-container">
-      {accomodations.map(({ id, title, cover }) => (
-        <NavLink to="/Accommodation" className="cards-container__navlink">
-          <article key={id} className="cards-container__navlink--article">
+      {accomodations.map((accommodation) => (
+        <NavLink
+          to={`/Accommodation/${accommodation.id}`}
+          className="cards-container__navlink"
+          state={{ accommodation }}
+        >
+          <article
+            key={accommodation.id}
+            className="cards-container__navlink--article"
+          >
             <img
               className="article__img"
-              src={cover}
-              alt="photos des locations"
+              src={accommodation.cover}
+              alt={`photos de ${accommodation.title}`}
             />
             <div className="article__container">
-              <h2 className="article__container--title">{title}</h2>
+              <h2 className="article__container--title">
+                {accommodation.title}
+              </h2>
             </div>
           </article>
         </NavLink>

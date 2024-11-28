@@ -17,7 +17,10 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Error404 />} />
-        <Route path="/accommodation" element={<AccommodationSheet />} />
+        <Route
+          path="/accommodation/:accomodationId"
+          element={<AccommodationSheet />}
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
