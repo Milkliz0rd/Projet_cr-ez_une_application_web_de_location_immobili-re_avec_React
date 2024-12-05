@@ -4,6 +4,10 @@ body {
   max-width: 1440px;
   margin: 50px auto;
   font-family: Fonts.$font-1;
+  @media (max-height: 700px) {
+    max-height: calc(100vh);
+    margin: 25px auto;
+  }
 }
 
 code {

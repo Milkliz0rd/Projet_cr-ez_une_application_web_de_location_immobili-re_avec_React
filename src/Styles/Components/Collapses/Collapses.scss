@@ -11,6 +11,9 @@
     border-radius: 5px;
     color: Colors.$white;
     margin-top: 40px;
+    @media (max-height: 700px) {
+      margin-top: 25px;
+    }
     &__header--title {
       margin-left: 20px;
     }

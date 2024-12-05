@@ -9,11 +9,19 @@
   &__title {
     font-size: 18em;
     margin-bottom: 40px;
+    @media (max-height: 700px) {
+      font-size: 10em;
+      margin-bottom: 20px;
+    }
   }
   &__descript {
     font-size: 36px;
     margin-top: 75px;
     font-weight: 500;
+    @media (max-height: 700px) {
+      font-size: 30px;
+      margin-top: 50px;
+    }
   }
   &__nav {
     color: black;
