@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Carouselle = ({ pictures }) => {
+const Carousselle = ({ pictures, title }) => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  function showPicture() {
+    return <img src={pictures[currentIndex]} alt={title} />
+  }
+  function prevPicture() {
+    setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length) //le modulo
+  }
+  function nextPicture() {
+    setCurrentIndex((currentIndex + 1) % pictures.length) // le modulo
+  }
   return (
     <div className="carousselle">
-      {pictures.map((pic, index) => (
-        <ul key={index}>
-          <li>
-            <img src={pic} alt="" />
-          </li>
-        </ul>
-      ))}
+      {showPicture()}
+      <button onClick={prevPicture}>Précédent</button>
+      <button onClick={nextPicture}>Suivant</button>
     </div>
   )
 }
 
-export default Carouselle
+export default Carousselle

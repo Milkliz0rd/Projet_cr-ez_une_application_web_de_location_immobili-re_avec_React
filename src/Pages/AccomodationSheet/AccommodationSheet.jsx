@@ -13,7 +13,11 @@ const AccommodationSheet = () => {
     <div>
       <Header />
       <div>
-        <Carouselle pictures={accommodation.pictures} id={accommodation.id} />
+        <Carouselle
+          pictures={accommodation.pictures}
+          id={accommodation.id}
+          title={accommodation.title}
+        />
       </div>
       <Footer />
     </div>

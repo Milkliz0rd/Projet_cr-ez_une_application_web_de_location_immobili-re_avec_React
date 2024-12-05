@@ -1,5 +1,9 @@
 @use '../../Colors/Colors.scss';
-.carouselle {
+.carousselle {
   height: 415px;
   border: 4px solid Colors.$black;
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
 }
