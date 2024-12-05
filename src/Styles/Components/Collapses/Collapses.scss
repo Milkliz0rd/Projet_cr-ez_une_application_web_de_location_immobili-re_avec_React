@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   .collapse {
+    width: 100%;
     position: relative;
     background-color: Colors.$color-1;
     border-radius: 5px;
@@ -34,8 +35,9 @@
     }
     &__content {
       background-color: Colors.$background-cards;
-      width: 1023px;
       max-height: 0;
+      border-radius: 0 0 5px 5px;
+
       visibility: hidden;
       overflow: hidden;
       opacity: 0;
@@ -47,6 +49,7 @@
         color: Colors.$black;
         opacity: 1;
         max-height: 300px;
+        padding: 10px;
       }
     }
   }

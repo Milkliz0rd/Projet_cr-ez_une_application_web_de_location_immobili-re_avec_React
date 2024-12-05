@@ -9,24 +9,26 @@
   border-radius: 25px;
 }
 .cards-container {
+  margin: 3em;
   display: grid;
+  height: auto;
   grid-template-columns: repeat(3, 1fr);
-  width: 100%;
-  gap: 1em;
-  @include margin-cards;
-  @include border-container-img;
+  grid-auto-rows: 450px;
   background-color: #f6f6f6;
   &__navlink {
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
     &--article {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      @include border-article-title;
-      @include margin-cards;
       .article__img {
         object-fit: cover;
-        @include border-container-img;
-        height: 300px;
-        width: 300px;
+        height: 100%;
+        width: 100%;
       }
       .article__container {
         position: absolute;
