@@ -13,11 +13,7 @@ const AccommodationSheet = () => {
     <div>
       <Header />
       <div>
-        <Carouselle
-          pictures={accommodation.pictures}
-          id={accommodation.id}
-          title={accommodation.title}
-        />
+        <Carouselle accommodation={accommodation} />
       </div>
       <Footer />
     </div>

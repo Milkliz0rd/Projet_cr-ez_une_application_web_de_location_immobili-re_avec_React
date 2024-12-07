@@ -1,23 +1,46 @@
-import React, { useState } from 'react'
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react'
 
-const Carousselle = ({ pictures, title }) => {
+const Carouselle = ({ accommodation }) => {
+  const pictures = accommodation.pictures
   const [currentIndex, setCurrentIndex] = useState(0)
   function showPicture() {
-    return <img src={pictures[currentIndex]} alt={title} />
+    return (
+      <img
+        src={pictures[currentIndex]}
+        alt={accommodation.title}
+        className="carouselle__img"
+      />
+    )
   }
   function prevPicture() {
-    setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length) //le modulo
+    setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length) //utilisation de la formule modulo. Ici on dit que le currentIndex doit rester entre la taille du tableau d'images(pictures) et 0 (img numéro une du tableau d'image) car il ne peut y avoir de négatif. Pour cela on additionne la taille du tableau de 'pictures' à notre index et on soustrait 1. Ex: dans le premier logement il y a 5 images dans le carouselle. si on arrive à 0 - 1, nous obtiendrons un chiffre négatif. Du coup nous faisons 0 - 1 + 5 = 4 qui elle même correpond à la 5eme images du carouselle. Par la suite on utlise le modulo 4 % 5 = le résultat est le reste de la division entière de 4 par 5. Donc 4 est notre position actuelle dans l'index du tableau.
   }
   function nextPicture() {
-    setCurrentIndex((currentIndex + 1) % pictures.length) // le modulo
+    setCurrentIndex((currentIndex + 1) % pictures.length) // Utilisation de la formule modulo. Ici on ajoute à l'index du tableau de 'pictures' 1. Par la suite on utilise modulo qui nous donnera la position actuelle de l'index
   }
   return (
-    <div className="carousselle">
+    <div className="carouselle">
       {showPicture()}
-      <button onClick={prevPicture}>Précédent</button>
-      <button onClick={nextPicture}>Suivant</button>
+      <p className="carouselle__index">
+        {currentIndex + 1}/{pictures.length}
+      </p>
+      <FontAwesomeIcon
+        icon={faChevronLeft}
+        onClick={prevPicture}
+        className="carouselle__btn carouselle__btn--left"
+      />
+      <FontAwesomeIcon
+        icon={faChevronRight}
+        onClick={nextPicture}
+        className="carouselle__btn carouselle__btn--right"
+      />
     </div>
   )
 }
 
-export default Carousselle
+export default Carouselle
