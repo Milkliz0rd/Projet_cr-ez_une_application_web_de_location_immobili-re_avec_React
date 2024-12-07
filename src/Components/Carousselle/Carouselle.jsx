@@ -5,14 +5,13 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 
-const Carouselle = ({ accommodation }) => {
-  const pictures = accommodation.pictures
+const Carouselle = ({ pictures, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   function showPicture() {
     return (
       <img
         src={pictures[currentIndex]}
-        alt={accommodation.title}
+        alt={title}
         className="carouselle__img"
       />
     )

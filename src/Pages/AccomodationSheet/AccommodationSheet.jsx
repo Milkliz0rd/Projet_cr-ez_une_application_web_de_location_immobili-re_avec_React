@@ -3,21 +3,28 @@ import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import Carouselle from '../../Components/Carousselle/Carouselle'
 import { useLocation, useParams } from 'react-router-dom'
+import AccomodationsInfos from '../../Components/AccomodationInfos/AccomodationsInfos'
 
-const AccommodationSheet = () => {
-  const { accommodationId } = useParams()
+const AccomodationSheet = () => {
+  const { accomodationId } = useParams()
   const { state } = useLocation()
-  const accommodation = state?.accommodation
+  const accomodation = state?.accommodation
 
   return (
     <div>
       <Header />
       <div>
-        <Carouselle accommodation={accommodation} />
+        <Carouselle
+          pictures={accomodation.pictures}
+          title={accomodation.title}
+        />
+      </div>
+      <div>
+        <AccomodationsInfos accomodation={accomodation} />
       </div>
       <Footer />
     </div>
   )
 }
 
-export default AccommodationSheet
+export default AccomodationSheet

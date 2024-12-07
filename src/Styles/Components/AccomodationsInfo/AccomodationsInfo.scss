@@ -1,0 +1,19 @@
+@use '../../Colors/Colors.scss';
+
+.accomodations-infos {
+  color: Colors.$color-1;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  &__title--p {
+    color: Colors.$black;
+  }
+  &__host {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    &--img {
+      border-radius: 100px;
+    }
+  }
+}
