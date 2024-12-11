@@ -10,6 +10,9 @@
   margin-top: 50px;
   color: Colors.$white;
   user-select: none;
+  @media (max-height: 700px) {
+    height: 380px;
+  }
   &__img {
     width: 100%;
     object-fit: cover;

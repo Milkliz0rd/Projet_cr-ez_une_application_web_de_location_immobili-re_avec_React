@@ -31,7 +31,7 @@ const AccomodationsInfos = ({ accomodation }) => {
         </ul>
         <StarsRating
           rating={accomodation.rating}
-          className="accomodations-info-body"
+          className="accomodations-info-body__rating"
         />
       </div>
     </div>

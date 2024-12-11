@@ -1,8 +1,11 @@
 @use '../../Colors/Colors.scss';
 
-.stars-empty {
-  color: gray;
-}
-.stars-full {
-  color: Colors.$color-1;
+.stars {
+  font-size: 30px;
+  &__empty {
+    color: Colors.$empty-stars;
+  }
+  &__full {
+    color: Colors.$color-1;
+  }
 }

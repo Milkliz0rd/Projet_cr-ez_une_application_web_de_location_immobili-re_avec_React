@@ -1,12 +1,18 @@
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React from 'react'
 
-const StarsRating = ({ rating, maxStars = 5 }) => {
-  const [stars, setStars] = useState(5)
+const StarsRating = ({ rating }) => {
+  const totalStars = 5
   return (
-    <div>
-      <FontAwesomeIcon icon={faStar} className="stars-empty" />
+    <div className="stars">
+      {Array.from({ length: totalStars }, (_, index) => (
+        <FontAwesomeIcon
+          key={index}
+          icon={faStar}
+          className={index < rating ? 'stars__full' : 'stars__empty'}
+        />
+      ))}
     </div>
   )
 }
