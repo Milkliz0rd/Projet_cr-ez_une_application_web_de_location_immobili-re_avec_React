@@ -1,8 +1,28 @@
 import React from 'react'
 import StarsRating from '../StarsRating/StarsRating'
+import Collapses from '../Collapses/Collapses'
 
 const AccomodationsInfos = ({ accomodation }) => {
   const tags = accomodation.tags
+  const collapseData = [
+    { id: 1, title: 'Descriptions', content: accomodation.description },
+    {
+      id: 2,
+      title: 'Equipements',
+      content: (
+        <ul>
+          {accomodation.equipments.map((equipment, index) => (
+            <li
+              className="accomodations-info-body__collapses--equipment"
+              key={index}
+            >
+              {equipment}
+            </li>
+          ))}
+        </ul>
+      ),
+    },
+  ]
   return (
     <div>
       <div className="accomodations-infos-header">
@@ -33,6 +53,9 @@ const AccomodationsInfos = ({ accomodation }) => {
           rating={accomodation.rating}
           className="accomodations-info-body__rating"
         />
+      </div>
+      <div className="collapse-accomodation">
+        <Collapses collapses={collapseData} />
       </div>
     </div>
   )

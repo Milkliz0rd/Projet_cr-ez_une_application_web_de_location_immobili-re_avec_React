@@ -48,5 +48,8 @@
       font-size: 14px;
       justify-content: center;
     }
+    &__collapses {
+      flex-direction: row;
+    }
   }
 }

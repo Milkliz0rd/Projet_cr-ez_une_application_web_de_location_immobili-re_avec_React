@@ -1,11 +1,8 @@
 @use '../../Colors/Colors.scss';
-
-.collapse-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+@mixin collapse {
   .collapse {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     position: relative;
     background-color: Colors.$color-1;
@@ -53,4 +50,20 @@
       }
     }
   }
+}
+.collapse-about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  @include collapse;
+}
+.collapse-accomodation {
+  display: flex;
+  flex-direction: row;
+  .collapse-container {
+    display: flex;
+    gap: 25px;
+  }
+  @include collapse;
 }
