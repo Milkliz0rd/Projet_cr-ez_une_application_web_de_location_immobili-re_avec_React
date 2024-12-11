@@ -1,4 +1,5 @@
 import React from 'react'
+import StarsRating from '../StarsRating/StarsRating'
 
 const AccomodationsInfos = ({ accomodation }) => {
   const tags = accomodation.tags
@@ -28,6 +29,10 @@ const AccomodationsInfos = ({ accomodation }) => {
             <li className="accomodations-info-body__tags--container">{tag}</li>
           ))}
         </ul>
+        <StarsRating
+          rating={accomodation.rating}
+          className="accomodations-info-body"
+        />
       </div>
     </div>
   )

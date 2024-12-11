@@ -1,0 +1,8 @@
+@use '../../Colors/Colors.scss';
+
+.stars-empty {
+  color: gray;
+}
+.stars-full {
+  color: Colors.$color-1;
+}
