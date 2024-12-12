@@ -8,7 +8,7 @@ const Collapses = ({ collapses }) => {
     if (openCollapses.includes(id)) {
       setOpenCollapses(openCollapses.filter((collapseId) => collapseId !== id))
     } else {
-      setOpenCollapses([...openCollapses, id])
+      setOpenCollapses([...openCollapses, id]) //spread operator
     }
   }
 
