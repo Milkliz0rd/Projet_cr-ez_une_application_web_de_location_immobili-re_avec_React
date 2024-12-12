@@ -45,8 +45,13 @@ const AccomodationsInfos = ({ accomodation }) => {
       </div>
       <div className="accomodations-info-body">
         <ul className="accomodations-info-body__tags">
-          {tags.map((tag) => (
-            <li className="accomodations-info-body__tags--container">{tag}</li>
+          {tags.map((tag, index) => (
+            <li
+              className="accomodations-info-body__tags--container"
+              key={index}
+            >
+              {tag}
+            </li>
           ))}
         </ul>
         <StarsRating

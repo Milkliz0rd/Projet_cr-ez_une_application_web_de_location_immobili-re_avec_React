@@ -7,14 +7,12 @@ import Cards from '../../Components/Cards/Cards'
 const Home = () => {
   return (
     <div>
-      <Header />
-      <div>
+      <div className="page-content">
+        <Header />
         <Banner />
         <Cards />
       </div>
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   )
 }

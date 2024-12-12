@@ -33,8 +33,8 @@ const About = () => {
   ]
   return (
     <div>
-      <Header />
-      <div>
+      <div className="page-content">
+        <Header />
         <BannerAbout />
         <div className="collapse-about">
           <Collapses collapses={aboutCollapses} />

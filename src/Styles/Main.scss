@@ -1,12 +1,17 @@
 @use './Fonts/Fonts.scss';
 
 body {
-  max-width: 1440px;
-  margin: 50px auto;
+  margin: 0;
   font-family: Fonts.$font-1;
   @media (max-height: 700px) {
     max-height: calc(100vh);
-    margin: 25px auto;
+  }
+  .page-content {
+    max-width: 1440px;
+    margin: 50px;
+    // @media (max-height: 700px) {
+    //   margin: 25px;
+    // }
   }
 }
 

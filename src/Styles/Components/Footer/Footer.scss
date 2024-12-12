@@ -1,15 +1,12 @@
 .footer-container {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   background-color: black;
   color: white;
-  width: calc(100vw);
+  // width: calc(100vw);
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  display: none; //to do(gérer le positionnement)
   &__img {
     height: 40px;
     padding: 30px;

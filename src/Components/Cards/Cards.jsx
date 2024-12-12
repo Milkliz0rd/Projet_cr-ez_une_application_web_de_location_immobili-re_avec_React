@@ -7,14 +7,12 @@ const Cards = () => {
     <div className="cards-container">
       {accomodations.map((accommodation) => (
         <NavLink
+          key={accommodation.id}
           to={`/Accommodation/${accommodation.id}`}
           className="cards-container__navlink"
           state={{ accommodation }}
         >
-          <article
-            key={accommodation.id}
-            className="cards-container__navlink--article"
-          >
+          <article className="cards-container__navlink--article">
             <img
               className="article__img"
               src={accommodation.cover}
