@@ -7,7 +7,7 @@
     height: fit-content;
     position: relative;
     background-color: Colors.$color-1;
-    border-radius: 5px;
+    border-radius: 6px;
     color: Colors.$white;
     margin-top: 40px;
     @media (max-height: 700px) {
@@ -67,4 +67,7 @@
     gap: 25px;
   }
   @include collapse;
+  .accomodations-info-body__collapses--equipment {
+    list-style: none;
+  }
 }

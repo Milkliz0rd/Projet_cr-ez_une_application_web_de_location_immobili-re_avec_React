@@ -33,14 +33,10 @@ const About = () => {
   ]
   return (
     <div>
-      <div className="page-content">
-        <Header />
-        <BannerAbout />
-        <div className="collapse-about">
-          <Collapses collapses={aboutCollapses} />
-        </div>
+      <BannerAbout />
+      <div className="collapse-about">
+        <Collapses collapses={aboutCollapses} />
       </div>
-      <Footer />
     </div>
   )
 }

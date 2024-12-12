@@ -12,15 +12,8 @@ const AccomodationSheet = () => {
 
   return (
     <div>
-      <div className="page-content">
-        <Header />
-        <Carouselle
-          pictures={accomodation.pictures}
-          title={accomodation.title}
-        />
-        <AccomodationsInfos accomodation={accomodation} />
-      </div>
-      <Footer />
+      <Carouselle pictures={accomodation.pictures} title={accomodation.title} />
+      <AccomodationsInfos accomodation={accomodation} />
     </div>
   )
 }

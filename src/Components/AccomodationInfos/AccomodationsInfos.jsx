@@ -10,14 +10,9 @@ const AccomodationsInfos = ({ accomodation }) => {
       id: 2,
       title: 'Equipements',
       content: (
-        <ul>
+        <ul className="accomodations-info-body__collapses--equipment">
           {accomodation.equipments.map((equipment, index) => (
-            <li
-              className="accomodations-info-body__collapses--equipment"
-              key={index}
-            >
-              {equipment}
-            </li>
+            <li key={index}>{equipment}</li>
           ))}
         </ul>
       ),
@@ -59,7 +54,7 @@ const AccomodationsInfos = ({ accomodation }) => {
           className="accomodations-info-body__rating"
         />
       </div>
-      <div className="collapse-accomodation">
+      <div className="collapse-accomodation accomodations-info-body__collapse">
         <Collapses collapses={collapseData} />
       </div>
     </div>
