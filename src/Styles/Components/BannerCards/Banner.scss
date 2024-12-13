@@ -16,9 +16,17 @@
   @include Main.media-querries-laptop {
     height: 12em;
   }
+  @include Main.media-querries-phone {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    box-shadow: none;
+    margin-top: 25px;
+  }
 }
 
-.banner-home {
+.banner {
   position: relative; /* Pour positionner l'arrière-plan */
   overflow: hidden; /* le contenu reste dans le conteneur */
   @include banner;
@@ -44,5 +52,15 @@
     text-shadow: 0px 4px 4px rgba(Colors.$black, $alpha: 0.5);
     text-align: center; /* Centrage horizontal */
     line-height: 4.5em; /* Aligne verticalement */
+    @include Main.media-querries-phone {
+      font-size: 1.5em;
+      display: flex;
+      flex-wrap: wrap;
+      text-shadow: none;
+      width: 224px;
+      line-height: 1;
+      text-align: start;
+      margin-left: 10px;
+    }
   }
 }

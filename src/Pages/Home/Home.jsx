@@ -1,12 +1,12 @@
 import React from 'react'
-import Footer from '../../Components/Footer/Footer'
 import Banner from '../../Components/BannerCards/Banner'
 import Cards from '../../Components/Cards/Cards'
 
 const Home = () => {
+  const bannerHomeContent = 'Chez vous, partout et ailleurs'
   return (
     <div>
-      <Banner />
+      <Banner text={bannerHomeContent} />
       <Cards />
     </div>
   )
