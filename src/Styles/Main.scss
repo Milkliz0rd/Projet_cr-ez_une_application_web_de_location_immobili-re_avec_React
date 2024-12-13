@@ -1,17 +1,27 @@
 @use './Fonts/Fonts.scss';
+@mixin media-querries-phone {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+@mixin media-querries-laptop {
+  @media (max-height: 700px) {
+    @content;
+  }
+}
 
 body {
   margin: 0;
   font-family: Fonts.$font-1;
-  @media (max-height: 700px) {
+  @include media-querries-laptop {
     max-height: calc(100vh);
   }
   .page-content {
     max-width: 1440px;
-    margin: 50px;
-    // @media (max-height: 700px) {
-    //   margin: 25px;
-    // }
+    margin: 25px 50px 25px 50px;
+    @include media-querries-phone {
+      margin: 10px 20px 10px 20px;
+    }
   }
 }
 

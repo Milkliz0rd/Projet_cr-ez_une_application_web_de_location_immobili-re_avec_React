@@ -7,6 +7,7 @@
   align-items: center;
   color: Colors.$color-1;
   &__title {
+    margin-top: 0;
     font-size: 18em;
     margin-bottom: 40px;
     @media (max-height: 700px) {
@@ -16,16 +17,16 @@
   }
   &__descript {
     font-size: 36px;
-    margin-top: 75px;
+    margin-top: 45px;
     font-weight: 500;
     @media (max-height: 700px) {
       font-size: 30px;
-      margin-top: 50px;
+      margin-top: 20px;
     }
   }
   &__nav {
     color: black;
     text-decoration: underline;
-    margin-top: 75px;
+    margin-top: 35px;
   }
 }
