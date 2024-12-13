@@ -1,8 +1,6 @@
 import React from 'react'
-import Header from '../../Components/Header/Header'
-import Footer from '../../Components/Footer/Footer'
-import BannerAbout from '../../Components/BannerAbout/BannerAbout'
 import Collapses from '../../Components/Collapses/Collapses'
+import Banner from '../../Components/Banner/Banner'
 
 const About = () => {
   const aboutCollapses = [
@@ -33,7 +31,7 @@ const About = () => {
   ]
   return (
     <div>
-      <BannerAbout />
+      <Banner />
       <div className="collapse-about">
         <Collapses collapses={aboutCollapses} />
       </div>

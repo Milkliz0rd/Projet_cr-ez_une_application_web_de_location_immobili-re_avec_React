@@ -1,8 +1,0 @@
-@use '../../Colors/Colors.scss';
-@use '../BannerCards/Banner.scss';
-
-.banner-about {
-  @include Banner.banner;
-  @include Banner.filter-cover;
-  background-image: url(../../../Assets/img/img-banner-about.png);
-}

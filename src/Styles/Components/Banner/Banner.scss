@@ -26,7 +26,7 @@
   }
 }
 
-.banner {
+.banner-home {
   position: relative; /* Pour positionner l'arrière-plan */
   overflow: hidden; /* le contenu reste dans le conteneur */
   @include banner;
@@ -63,4 +63,10 @@
       margin-left: 10px;
     }
   }
+}
+
+.banner-about {
+  @include banner;
+  @include filter-cover;
+  background-image: url(../../../Assets/img/img-banner-about.png);
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../../Components/BannerCards/Banner'
+import Banner from '../../Components/Banner/Banner'
 import Cards from '../../Components/Cards/Cards'
 
 const Home = () => {
