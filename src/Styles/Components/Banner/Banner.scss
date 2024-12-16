@@ -12,7 +12,6 @@
   border: 1px solid Colors.$black;
   box-shadow: 0px 4px 4px 0px rgba(Colors.$black, $alpha: 0.2);
   border-radius: 2em;
-  margin-top: 50px;
   @include Main.media-querries-laptop {
     height: 12em;
   }

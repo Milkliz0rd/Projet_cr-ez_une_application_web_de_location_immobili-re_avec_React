@@ -1,4 +1,5 @@
 @use '../../Colors/Colors.scss';
+@use '../../Main.scss';
 
 .error-content {
   display: flex;
@@ -6,11 +7,15 @@
   flex-direction: column;
   align-items: center;
   color: Colors.$color-1;
+  @include Main.media-querries-phone {
+    margin: 50px;
+    gap: 50px;
+  }
   &__title {
     margin-top: 0;
     font-size: 18em;
     margin-bottom: 40px;
-    @media (max-height: 700px) {
+    @include Main.media-querries-laptop {
       font-size: 10em;
       margin-bottom: 20px;
     }
@@ -19,9 +24,13 @@
     font-size: 36px;
     margin-top: 45px;
     font-weight: 500;
-    @media (max-height: 700px) {
+    @include Main.media-querries-laptop {
       font-size: 30px;
       margin-top: 20px;
+    }
+    @include Main.media-querries-phone {
+      text-align: center;
+      font-size: 18px;
     }
   }
   &__nav {
