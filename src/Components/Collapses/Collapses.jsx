@@ -19,7 +19,6 @@ const Collapses = ({ collapses }) => {
           <div className="collapse__header">
             <h3 className="collapse__header--title">{collapse.title}</h3>
             <FontAwesomeIcon
-              style={{ height: '32px', width: 'auto' }}
               icon={faChevronUp}
               className={`collapse__header--btn ${openCollapses.includes(collapse.id) ? 'open' : ''}`}
               onClick={() => toggleCollapse(collapse.id)}

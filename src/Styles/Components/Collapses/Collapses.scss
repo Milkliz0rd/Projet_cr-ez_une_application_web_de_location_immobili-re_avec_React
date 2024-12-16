@@ -1,4 +1,6 @@
 @use '../../Colors/Colors.scss';
+@use '../../Main.scss';
+
 @mixin collapse {
   .collapse {
     display: flex;
@@ -10,15 +12,21 @@
     border-radius: 6px;
     color: Colors.$white;
     margin-top: 40px;
-    @media (max-height: 700px) {
+    @include Main.media-querries-laptop {
       margin-top: 25px;
+    }
+    @include Main.media-querries-phone {
+      margin-top: 15px;
     }
     &__header--title {
       margin-left: 20px;
+      @include Main.media-querries-phone {
+        font-size: 13px;
+      }
     }
     &__header--btn {
       position: absolute;
-      height: 32px;
+      font-size: 32px;
       width: auto;
       right: 20px;
       top: 0px;
@@ -27,6 +35,10 @@
       margin: 20px;
       transform: rotate(0deg);
       transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
+      @include Main.media-querries-phone {
+        right: 5px;
+        top: -10px;
+      }
       &.open {
         transform: rotate(-180deg);
       }
@@ -47,7 +59,7 @@
         color: Colors.$black;
         opacity: 1;
         max-height: 300px;
-        padding: 10px;
+        padding: 15px;
       }
     }
   }
@@ -62,12 +74,22 @@
 .collapse-accomodation {
   display: flex;
   flex-direction: row;
+  @include Main.media-querries-phone {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
   .collapse-container {
     display: flex;
     gap: 25px;
+    @include Main.media-querries-phone {
+      display: block;
+    }
   }
   @include collapse;
   .accomodations-info-body__collapses--equipment {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }

@@ -1,4 +1,6 @@
 @use '../../Colors/Colors.scss';
+@use '../../Main.scss';
+
 .carouselle {
   position: relative;
   height: 480px;
@@ -10,8 +12,12 @@
   margin-top: 50px;
   color: Colors.$white;
   user-select: none;
-  @media (max-height: 700px) {
+  @include Main.media-querries-laptop {
     height: 380px;
+  }
+  @include Main.media-querries-phone {
+    margin-top: 0;
+    height: 255px;
   }
   &__img {
     width: 100%;
@@ -22,19 +28,31 @@
     bottom: 0;
     left: 50%;
     font-size: 18px;
+    @include Main.media-querries-phone {
+      display: none;
+    }
   }
   &__btn {
     position: absolute;
-
     font-size: 100px;
     top: 40%;
+    @include Main.media-querries-phone {
+      font-size: 25px;
+      top: 50%;
+    }
     &--left {
       left: 0;
       margin-left: 25px;
+      @include Main.media-querries-phone {
+        margin-left: 5px;
+      }
     }
     &--right {
       right: 0;
       margin-right: 25px;
+      @include Main.media-querries-phone {
+        margin-right: 5px;
+      }
     }
   }
 }

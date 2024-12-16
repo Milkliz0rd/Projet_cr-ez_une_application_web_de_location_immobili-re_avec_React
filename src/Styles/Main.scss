@@ -16,6 +16,11 @@ body {
   @include media-querries-laptop {
     max-height: calc(100vh);
   }
+  .page-structure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .page-content {
     max-width: 1440px;
     margin: 25px 50px 25px 50px;

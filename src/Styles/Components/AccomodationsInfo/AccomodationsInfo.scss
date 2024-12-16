@@ -1,55 +1,89 @@
 @use '../../Colors/Colors.scss';
+@use '../../Main.scss';
 
-.accomodations-infos-header {
-  color: Colors.$color-1;
+.accomodations-info {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
-  &__title {
-    &--h1 {
-      font-size: 36px;
-      font-weight: 500;
-      line-height: 51px;
-      margin-bottom: 0;
+  @include Main.media-querries-phone {
+    flex-direction: column;
+  }
+  .accomodations-infos-header {
+    color: Colors.$color-1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 25px;
+    &__title {
+      &--h1 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 51px;
+        margin-bottom: 0;
+        @include Main.media-querries-phone {
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+      &--p {
+        color: Colors.$black;
+        line-height: 25px;
+        font-size: 18px;
+        margin: 0;
+      }
     }
-    &--p {
-      color: Colors.$black;
-      line-height: 25px;
-      font-size: 18px;
+    &__tags {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      gap: 25px;
+      &--container {
+        color: Colors.$white;
+        background-color: Colors.$color-1;
+        border-radius: 10px;
+        padding: 5px 20px 5px 20px;
+        font-weight: 700;
+        font-size: 14px;
+        justify-content: center;
+        @include Main.media-querries-phone {
+          font-size: 10px;
+          display: flex;
+          text-align: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .accomodations-info-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    @include Main.media-querries-phone {
+      flex-direction: row-reverse;
       margin: 0;
     }
-  }
-  &__host {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    &--img {
-      border-radius: 100px;
-      height: 100px;
-    }
-  }
-}
-.accomodations-info-body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 15px 0;
-  &__tags {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    gap: 25px;
-    &--container {
-      color: Colors.$white;
-      background-color: Colors.$color-1;
-      border-radius: 25px;
-      padding: 5px 20px 5px 20px;
-      font-weight: 700;
-      font-size: 14px;
-      justify-content: center;
-    }
-    &__collapse {
-      flex-direction: row;
+    &__host {
+      display: flex;
+      color: Colors.$color-1;
+      align-items: center;
+      gap: 10px;
+      margin: auto;
+      @include Main.media-querries-phone {
+        margin: 0;
+      }
+      &--name {
+        @include Main.media-querries-phone {
+          width: 75px;
+        }
+      }
+      &--img {
+        border-radius: 100px;
+        height: 75px;
+        @include Main.media-querries-phone {
+          height: 50px;
+        }
+      }
     }
   }
 }

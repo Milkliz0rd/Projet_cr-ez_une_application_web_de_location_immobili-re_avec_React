@@ -5,7 +5,7 @@ import Footer from './Components/Footer/Footer'
 
 const Layout = () => {
   return (
-    <div>
+    <div className="page-structure">
       <header className="page-content">
         <Header />
       </header>
