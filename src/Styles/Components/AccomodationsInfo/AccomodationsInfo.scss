@@ -67,7 +67,6 @@
       display: flex;
       color: Colors.$color-1;
       align-items: center;
-      gap: 10px;
       margin: auto;
       @include Main.media-querries-phone {
         margin: 0;

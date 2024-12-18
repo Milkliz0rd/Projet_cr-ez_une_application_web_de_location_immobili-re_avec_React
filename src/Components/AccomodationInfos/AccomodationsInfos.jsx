@@ -17,10 +17,11 @@ const AccomodationsInfos = ({ accomodation }) => {
         </ul>
       ),
     },
-  ]
+  ] // ici on transfert les données que l'on veut avoir dans nos composants collapses
   return (
     <div>
       <div className="accomodations-info">
+        {/*Partie où l'on retrouve le nom de la location, le lieu où elle se trouve et ses tags */}
         <div className="accomodations-infos-header">
           <div className="accomodations-infos-header__title">
             <h1 className="accomodations-infos-header__title--h1">
@@ -41,6 +42,7 @@ const AccomodationsInfos = ({ accomodation }) => {
             ))}
           </ul>
         </div>
+        {/* Partie Hote, où l'on retrouve le nom et la photo de l'hébergeur */}
         <div className="accomodations-info-body">
           <div className="accomodations-info-body__host">
             <div className="accomodations-info-body__host--name">
@@ -54,6 +56,7 @@ const AccomodationsInfos = ({ accomodation }) => {
               />
             </div>
           </div>
+          {/*  affiche le composant StarsRating à qui on tranfert la props 'accomodation.rating' */}
           <div>
             <StarsRating
               rating={accomodation.rating}
@@ -62,6 +65,7 @@ const AccomodationsInfos = ({ accomodation }) => {
           </div>
         </div>
       </div>
+      {/* affiche le composant collapse à qui on transfert la props 'collapseData' */}
       <div className="collapse-accomodation accomodations-info-body__collapse">
         <Collapses collapses={collapseData} />
       </div>

@@ -15,15 +15,38 @@ root.render(
       future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
     >
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route
-            path="/accommodation/:accomodationId"
-            element={<AccommodationSheet />}
-          />
-          <Route path="*" element={<Error404 />} />
-        </Route>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Layout>
+              <About />
+            </Layout>
+          }
+        />
+        <Route
+          path="/accommodation/:accomodationId"
+          element={
+            <Layout>
+              <AccommodationSheet />
+            </Layout>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <Error404 />
+            </Layout>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
