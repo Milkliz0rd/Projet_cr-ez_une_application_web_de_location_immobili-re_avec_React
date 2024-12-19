@@ -1,6 +1,7 @@
 import React from 'react'
 import LogoFooter from '../../Assets/img/logo-footer.png'
 
+// Composant Footer, appélé dans le Layout pour la mise en page.
 const Footer = () => {
   return (
     <footer className="footer-container">

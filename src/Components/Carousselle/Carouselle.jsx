@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 
 const Carouselle = ({ pictures, title }) => {
+  // UseState afin de définir et de modifier l'emplacement de l'index dans le carrouselle d'images.
   const [currentIndex, setCurrentIndex] = useState(0)
   function showPicture() {
     return (
