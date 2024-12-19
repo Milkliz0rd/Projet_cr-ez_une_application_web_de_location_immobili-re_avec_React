@@ -1,16 +1,23 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+// Ce composant est notre menu de Navigation, il nous permet de naviguer entre les pages grâce au composant NavLink.
 const Navigation = () => {
   return (
     <div>
       <ul className="nav-page">
-        <NavLink to={'/'} className={'nav-page__link'}>
-          <li>Acceuil</li>
-        </NavLink>
-        <NavLink to={'/about'} className={'nav-page__link'}>
-          <li>A Propos</li>
-        </NavLink>
+        {/* NavLink vers la page Acceuil */}
+        <li>
+          <NavLink to={'/'} className={'nav-page__link'}>
+            Acceuil
+          </NavLink>
+        </li>
+        {/* NavLink vers la page About */}
+        <li>
+          <NavLink to={'/about'} className={'nav-page__link'}>
+            A Propos
+          </NavLink>
+        </li>
       </ul>
     </div>
   )

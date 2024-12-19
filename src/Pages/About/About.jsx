@@ -3,6 +3,7 @@ import Collapses from '../../Components/Collapses/Collapses'
 import Banner from '../../Components/Banner/Banner'
 
 const About = () => {
+  // data des Collapses d'about
   const aboutCollapses = [
     {
       id: 1,
@@ -31,7 +32,9 @@ const About = () => {
   ]
   return (
     <div>
+      {/* appel du composant Banner */}
       <Banner />
+      {/* Appel du composant Collapses en lui transmettant la props collapses */}
       <div className="collapse-about">
         <Collapses collapses={aboutCollapses} />
       </div>

@@ -12,6 +12,7 @@ const Error404 = () => {
         <h2 className="error-content__descript">
           Oups! La page que vous demandez n'existe pas.
         </h2>
+        {/* NavlInk qui permet de retourner à la page d'acceuil */}
         <NavLink to={'/'} className={'error-content__nav'}>
           Retourner sur la page d'acceuil
         </NavLink>
