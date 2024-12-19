@@ -14,41 +14,18 @@ root.render(
     {/* Ici nous faisont appel au composant BrowserRouter qui provient de la bibliothèque React-Router-dom, c'est lui qui va nous permettre de naviguer entre les pages de notre application.*/}
     <BrowserRouter>
       <Routes>
-        {/* Chaque page est définit dans un composant 'Route' */}
-        <Route
-          path="/"
-          element={
-            // les pages sont intégrées dans 'Layout' pour avoir la même structure de page partout et éviter de rappeler les composants fixes de chaques pages.
-            <Layout>
-              <Home />
-            </Layout>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <Layout>
-              <About />
-            </Layout>
-          }
-        />
-        <Route
-          path="/accomodation/:accomodationId"
-          element={
-            <Layout>
-              <AccommodationSheet />
-            </Layout>
-          }
-        />
-        {/* Cette route possède un path '*' pour dire que tous les autres url utilisés hormis ceux que l'on a définit dans 'Routes' renverront à la page 404. */}
-        <Route
-          path="*"
-          element={
-            <Layout>
-              <Error404 />
-            </Layout>
-          }
-        />
+        {/* Chaque page est définit dans un composant 'Route' qui possèdent le composant 'Layout' qui servira de mise en page générale de l'application */}
+        <Route path="/" element={<Layout />}>
+          {/* On indique que la page 'Home' est la page principal grace à index */}
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route
+            path="/accomodation/:accomodationId"
+            element={<AccommodationSheet />}
+          />
+          {/* Cette route possède un path '*' pour dire que tous les autres url utilisés hormis ceux que l'on a définit dans 'Routes' renverront à la page 404. */}
+          <Route path="*" element={<Error404 />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

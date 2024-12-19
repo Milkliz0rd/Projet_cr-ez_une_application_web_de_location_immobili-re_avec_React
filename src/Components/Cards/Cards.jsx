@@ -9,7 +9,7 @@ const Cards = () => {
       {accomodations.map((accommodation) => (
         <NavLink
           key={accommodation.id} //utilisation de l'id prop de chaque logement
-          to={`/Accommodation/${accommodation.id}`} //l'id de l'appartement apparaîtra dans l'url de la page de l'élément cliqué grace à useParam (se trouve sur la page 'AccomodationsSheets')
+          to={`/Accomodation/${accommodation.id}`} //l'id de l'appartement apparaîtra dans l'url de la page de l'élément cliqué grace à useParam (se trouve sur la page 'AccomodationsSheets')
           className="cards-container__navlink"
           state={{ accommodation }} //utilisation de state pour tranférer les données dynamiquement via Navlink à la page AccommodationSheet propre à la card cliqué.
         >

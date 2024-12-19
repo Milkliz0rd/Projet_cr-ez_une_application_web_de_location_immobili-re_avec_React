@@ -1,7 +1,4 @@
 import React from 'react'
-
-import Footer from '../../Components/Footer/Footer'
-import Header from '../../Components/Header/Header'
 import { NavLink } from 'react-router-dom'
 
 const Error404 = () => {
