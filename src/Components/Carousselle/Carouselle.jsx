@@ -23,24 +23,28 @@ const Carouselle = ({ pictures, title }) => {
   function nextPicture() {
     setCurrentIndex((currentIndex + 1) % pictures.length) // Utilisation de la formule modulo. Ici on ajoute à l'index du tableau de 'pictures' 1. Par la suite on utilise modulo qui nous donnera la position actuelle de l'index
   }
+  console.log(pictures.length)
+  const isHidden = pictures.length <= 1
+  console.log(isHidden)
+
   return (
     <div className="carouselle">
       {/* On appel la fonction showPicture qui nous permet de voir la photo selon son index */}
       {showPicture()}
-      <p className="carouselle__index">
+      <p className={`${isHidden ? 'hidden' : 'carouselle__index'}`}>
         {currentIndex + 1}/{pictures.length}
       </p>
       {/* flèche de navigation qui recule dans la liste d'image avec le onClick prevPicture */}
       <FontAwesomeIcon
         icon={faChevronLeft}
         onClick={prevPicture}
-        className="carouselle__btn carouselle__btn--left"
+        className={`${isHidden ? 'hidden' : 'carouselle__btn carouselle__btn--left'}`}
       />
       {/* flèche de navigation qui avance dans la liste d'image avec le onClick nextPicture */}
       <FontAwesomeIcon
         icon={faChevronRight}
         onClick={nextPicture}
-        className="carouselle__btn carouselle__btn--right"
+        className={`${isHidden ? 'hidden' : 'carouselle__btn carouselle__btn--right'}`}
       />
     </div>
   )

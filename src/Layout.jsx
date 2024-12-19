@@ -7,12 +7,12 @@ import Footer from './Components/Footer/Footer'
 const Layout = ({ children }) => {
   return (
     <div className="page-structure">
-      <header className="page-content">
+      <div className="page-content">
         {/* Ici, on appel le composant 'Header' */}
         <Header />
-      </header>
-      {/* Ici, ce sera l'emplacement de la page actuelle */}
-      <main className="page-content">{children}</main>
+        {/* Ici, ce sera l'emplacement de la page actuelle */}
+        {children}
+      </div>
       <footer>
         {/* Ici, on appel le composant 'Footer' */}
         <Footer />

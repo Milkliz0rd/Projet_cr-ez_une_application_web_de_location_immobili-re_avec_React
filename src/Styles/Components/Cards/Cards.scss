@@ -17,6 +17,9 @@
   grid-auto-rows: 271px;
   gap: 64px;
   background-color: #f6f6f6;
+  @include Main.media-querries-laptop {
+    grid-template-columns: 1fr;
+  }
   @include Main.media-querries-phone {
     grid-template-columns: 1fr;
     background-color: Colors.$white;

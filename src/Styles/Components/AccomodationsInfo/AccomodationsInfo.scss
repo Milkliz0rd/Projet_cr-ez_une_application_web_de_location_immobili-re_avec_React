@@ -68,10 +68,13 @@
       color: Colors.$color-1;
       align-items: center;
       margin: auto;
+      gap: 25px;
       @include Main.media-querries-phone {
         margin: 0;
       }
       &--name {
+        width: 100px;
+        text-align: right;
         @include Main.media-querries-phone {
           width: 75px;
         }

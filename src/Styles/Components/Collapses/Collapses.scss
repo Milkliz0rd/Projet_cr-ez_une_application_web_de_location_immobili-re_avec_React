@@ -80,8 +80,9 @@
     align-items: center;
   }
   .collapse-container {
+    width: 100%;
     display: flex;
-    gap: 25px;
+    gap: 30px;
     @include Main.media-querries-phone {
       display: block;
     }

@@ -1,11 +1,12 @@
 @use '../../Main.scss';
 
-.header {
+header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   width: 100%;
   height: 4em;
+  margin-bottom: 25px;
   @include Main.media-querries-laptop {
     height: 3em;
   }
