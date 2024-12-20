@@ -29,7 +29,7 @@ const Carouselle = ({ pictures, title }) => {
 
   return (
     <div className="carouselle">
-      {/* On appel la fonction showPicture qui nous permet de voir la photo selon son index */}
+      {/* On appel la fonction showPicture qui nous permet de voir la photo selon son index. On y ajoute la condition que si dans le carous */}
       {showPicture()}
       <p className={`${isHidden ? 'hidden' : 'carouselle__index'}`}>
         {currentIndex + 1}/{pictures.length}
