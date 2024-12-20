@@ -23,24 +23,24 @@ const Carouselle = ({ pictures, title }) => {
   function nextPicture() {
     setCurrentIndex((currentIndex + 1) % pictures.length) // Utilisation de la formule modulo. Ici on ajoute à l'index du tableau de 'pictures' 1. Par la suite on utilise modulo qui nous donnera la position actuelle de l'index
   }
-  console.log(pictures.length)
+  
   const isHidden = pictures.length <= 1
-  console.log(isHidden)
+  // Constante qui evite de répéter notre condition de cacher ou non l'index et les flèches de navigation.
 
   return (
     <div className="carouselle">
-      {/* On appel la fonction showPicture qui nous permet de voir la photo selon son index */}
+      {/* On appel la fonction showPicture qui nous permet de voir la photo selon son index. On y ajoute la const isHidden et selon le nombre de photo, il applique le className 'hidden' ou 'carouselle__index  */}
       {showPicture()}
       <p className={`${isHidden ? 'hidden' : 'carouselle__index'}`}>
         {currentIndex + 1}/{pictures.length}
       </p>
-      {/* flèche de navigation qui recule dans la liste d'image avec le onClick prevPicture */}
+      {/* flèche de navigation qui recule dans la liste d'image avec le onClick prevPicture. On y ajoute la const isHidden et selon le nombre de photo, il applique le className 'hidden' ou 'carouselle__btn &--left'  */} 
       <FontAwesomeIcon
         icon={faChevronLeft}
         onClick={prevPicture}
         className={`${isHidden ? 'hidden' : 'carouselle__btn carouselle__btn--left'}`}
       />
-      {/* flèche de navigation qui avance dans la liste d'image avec le onClick nextPicture */}
+      {/* flèche de navigation qui avance dans la liste d'image avec le onClick nextPicture. On y ajoute la const isHidden et selon le nombre de photo, il applique le className 'hidden' ou 'carouselle__btn &--right' */}
       <FontAwesomeIcon
         icon={faChevronRight}
         onClick={nextPicture}
