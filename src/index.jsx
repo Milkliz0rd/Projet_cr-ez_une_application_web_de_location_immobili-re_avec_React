@@ -12,7 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     {/* Ici nous faisont appel au composant BrowserRouter qui provient de la bibliothèque React-Router-dom, c'est lui qui va nous permettre de naviguer entre les pages de notre application.*/}
-    <BrowserRouter>
+    <BrowserRouter
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }} //enlève le flag warning qui annonce la futur version de React Router
+    >
       <Routes>
         {/* Chaque page est définit dans un composant 'Route' */}
         <Route

@@ -12,7 +12,7 @@
     border-radius: 6px;
     color: Colors.$white;
     margin-top: 40px;
-    @include Main.media-querries-laptop {
+    @include Main.media-querries-tablette {
       margin-top: 25px;
     }
     @include Main.media-querries-phone {

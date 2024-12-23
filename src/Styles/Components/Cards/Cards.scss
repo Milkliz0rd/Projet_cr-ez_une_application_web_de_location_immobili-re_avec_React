@@ -17,7 +17,7 @@
   grid-auto-rows: 271px;
   gap: 64px;
   background-color: #f6f6f6;
-  @include Main.media-querries-laptop {
+  @include Main.media-querries-tablette {
     grid-template-columns: 1fr;
   }
   @include Main.media-querries-phone {
@@ -66,6 +66,11 @@
           font-size: 18px;
           font-weight: 700;
           line-height: 26px;
+          @include Main.media-querries-laptop {
+            font-size: 14px;
+            line-height: 20px;
+            width: 70%;
+          }
           @include Main.media-querries-phone {
             width: 55%;
           }

@@ -5,6 +5,11 @@
   }
 }
 @mixin media-querries-laptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-querries-tablette {
   @media (max-width: 768px) {
     @content;
   }
@@ -24,7 +29,7 @@ body {
       flex-direction: column;
       flex: 1;
       margin: 25px 50px;
-      @include media-querries-laptop {
+      @include media-querries-tablette {
         max-width: 1440px;
         margin: 25px 50px 25px 50px;
       }

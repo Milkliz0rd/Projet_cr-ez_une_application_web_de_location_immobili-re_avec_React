@@ -16,7 +16,7 @@
     margin-top: 0;
     font-size: 18em;
     margin-bottom: 40px;
-    @include Main.media-querries-laptop {
+    @include Main.media-querries-tablette {
       margin-bottom: 20px;
     }
     @include Main.media-querries-phone {
@@ -27,7 +27,7 @@
     font-size: 36px;
     margin-top: 45px;
     font-weight: 500;
-    @include Main.media-querries-laptop {
+    @include Main.media-querries-tablette {
       text-align: center;
       font-size: 30px;
       margin-top: 20px;

@@ -11,7 +11,7 @@
   width: 100%;
   color: Colors.$white;
   user-select: none;
-  @include Main.media-querries-laptop {
+  @include Main.media-querries-tablette {
     height: 380px;
   }
   @include Main.media-querries-phone {
