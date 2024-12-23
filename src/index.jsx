@@ -44,6 +44,14 @@ root.render(
         />
         {/* Cette route possède un path '*' pour dire que tous les autres url utilisés hormis ceux que l'on a définit dans 'Routes' renverront à la page 404. */}
         <Route
+          path="/404"
+          element={
+            <Layout>
+              <Error404 />
+            </Layout>
+          }
+        />
+        <Route
           path="*"
           element={
             <Layout>

@@ -13,10 +13,8 @@ const Layout = ({ children }) => {
         {/* Ici, ce sera l'emplacement de la page actuelle */}
         {children}
       </div>
-      <footer>
-        {/* Ici, on appel le composant 'Footer' */}
-        <Footer />
-      </footer>
+      {/* Ici, on appel le composant 'Footer' */}
+      <Footer />
     </div>
   )
 }

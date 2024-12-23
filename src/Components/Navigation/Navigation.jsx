@@ -9,7 +9,7 @@ const Navigation = () => {
         {/* NavLink vers la page Acceuil */}
         <li>
           <NavLink to={'/'} className={'nav-page__link'}>
-            Acceuil
+            Accueil
           </NavLink>
         </li>
         {/* NavLink vers la page About */}
