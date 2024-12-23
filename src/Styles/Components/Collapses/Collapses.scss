@@ -47,13 +47,12 @@
       background-color: Colors.$background-cards;
       max-height: 0;
       border-radius: 0 0 5px 5px;
-
       visibility: hidden;
       overflow: hidden;
       opacity: 0;
       transition:
         opacity 450ms,
-        max-height 200ms;
+        max-height 100ms;
       &.open {
         visibility: visible;
         color: Colors.$black;
