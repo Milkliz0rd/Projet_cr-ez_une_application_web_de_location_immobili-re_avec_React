@@ -10,9 +10,9 @@ header {
   @include Main.media-querries-tablette {
     height: 3em;
   }
-  &__img {
+  img {
     @include Main.media-querries-phone {
-      height: 50px;
+      height: 3em;
     }
   }
 }

@@ -3,7 +3,7 @@
 
 .carouselle {
   position: relative;
-  height: 480px;
+  height: 415px;
   border-radius: 25px;
   display: flex;
   overflow: hidden;
@@ -11,9 +11,6 @@
   width: 100%;
   color: Colors.$white;
   user-select: none;
-  @include Main.media-querries-tablette {
-    height: 380px;
-  }
   @include Main.media-querries-phone {
     margin-top: 0;
     height: 255px;

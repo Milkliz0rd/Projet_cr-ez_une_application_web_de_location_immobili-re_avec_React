@@ -5,7 +5,7 @@
   display: flex;
   gap: 3.5em;
   @include Main.media-querries-phone {
-    gap: 30px;
+    gap: 25px;
   }
   &__link {
     color: black;
@@ -16,7 +16,7 @@
       font-size: 22px;
     }
     @include Main.media-querries-phone {
-      font-size: 17px;
+      font-size: 15px;
     }
   }
   // La class active n'a pas besoin d'être définit, elle est ajoutée directement lorque nous sommes sur la page demandée. C'est une particularité de React-Router-Dom
